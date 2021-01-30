@@ -4,32 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" id="cssSheet">
-    <title>Document</title>
+    <title>Pixel Art Thingy</title>
 </head>
 
 <body>
     <div>
-    <div>
-        <h1 class="text" style="margin-top: 20px;">
-            Something something drawing
-        </h1>
-    </div>
-
-
-    <div id="grid-wrapper">
-    </div>
-
-    <div id="options" style="display: flex; justify-content: center;">
-        <a class="button3"  onclick="changeCanvasSize()">Change size</a>
-        <a class="button3" onclick="clearContentFromPixel()">Eraser</a>
-        <a class="button3" onclick="clearCanvas()">Clear</a>
-        <div id="color-options">
-            <label for="favcolor" class="text">Change color:</label>
-            <input onblur="changeDrawingColor()" type="color" id="favcolor" name="favcolor" value="#ff0000">
+        <div>
+            <h1 class="text" style="margin-top: 20px;">
+                Something something pixel art
+            </h1>
+        </div>
+        <div id="grid-wrapper">
         </div>
 
+        <div id="options" style="display: flex; justify-content: center;">
+            <a class="button3" onclick="changeCanvasSize()">Change size</a>
+            <a class="button3" onclick="clearContentFromPixel()">Eraser</a>
+            <a class="button3" onclick="clearCanvas()">Clear</a>
+            <div id="color-options">
+                <label for="favcolor" class="text">Selected color:</label>
+                <input onblur="changeDrawingColor()" type="color" id="favcolor" name="favcolor" value="#ff0000">
+            </div>
+        </div>
     </div>
-</div>
+    <footer style="display: flex; justify-content: center; align-items: center;">
+        <a href="https://twitter.com/KhaledMAlasmari" target="_blank"><img width="60px" src="img/twitter.png"></a>
+        <a href="https://khaledmalasmari.github.io/" target="_blank"><img width="35px" src="img/web.png"></a>
+        <a href="https://github.com/KhaledMAlasmari" target="_blank"><img width="60px" src="img/github.png"></a>
+    </footer>
     <script src="script.js"></script>
 </body>
 

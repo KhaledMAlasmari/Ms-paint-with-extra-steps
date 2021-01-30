@@ -5,11 +5,11 @@ let eraserMouseClicked = false;
 
 let checkIfMouseIsClicked = (item) => {
     item.addEventListener('mousedown', () => {
-        if(eraserClicked){
-            item.style.cssText = "background-color = #000000; transition: background-color 100ms linear;";
+        if (eraserClicked) {
+            item.style.cssText = "background-color = #000000; transition: background-color 250ms linear;";
             eraserMouseClicked = true;
         }
-        else{
+        else {
             isDrawing = true;
         }
     });
@@ -20,8 +20,8 @@ let drawOnCanvas = (item) => {
         if (eraserClicked == false && isDrawing) {
             item.style.cssText = changeDrawingColor();
         }
-        else if(eraserClicked && eraserMouseClicked){
-            item.style.cssText = "background-color = #000000; transition: background-color 100ms linear;";
+        else if (eraserClicked && eraserMouseClicked) {
+            item.style.cssText = "background-color = #000000; transition: background-color 250ms linear;";
         }
     })
 }
@@ -62,7 +62,7 @@ let getNumberOfPixels = (numPixels) => {
 }
 
 
-const removeElements = (size) => {
+const removeElements = () => {
     canvas.childNodes.forEach((child) => {
         child.remove()
     })
@@ -99,9 +99,9 @@ const defaultCanvasSize = () => {
 const changeCanvasSize = () => {
     let userSizeEntry = 0;
     while (userSizeEntry < 10 || userSizeEntry > 100) {
-        if(userSizeEntry != null)
+        if (userSizeEntry != null)
             userSizeEntry = prompt("Please enter a size between 10 and 100: ")
-        else{
+        else {
             return
         }
     }
@@ -118,7 +118,7 @@ const clearContentFromPixel = () => {
 
 const changeDrawingColor = () => {
     color = document.getElementById('favcolor');
-    return 'background-color: ' + String(color.value) +"; " + "transition: background-color 1000ms linear;"
+    return 'background-color: ' + String(color.value) + "; " + "transition: background-color 250ms linear;"
 }
 
 defaultCanvasSize()
